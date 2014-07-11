@@ -1,4 +1,8 @@
 lancecaraccioli.github.io
 =========================
 
-GitHub Page
+[GitHub Page Quick Start](https://pages.github.com/)
+
+
+
+
