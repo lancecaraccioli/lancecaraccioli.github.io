@@ -1,0 +1,160 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>doc</title>
+    <style>
+      /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
+      pre code {
+        display: block; padding: 0.5em;
+        color: #333;
+        background: #f8f8ff
+      }
+      pre .comment,
+      pre .template_comment,
+      pre .diff .header,
+      pre .javadoc {
+        color: #998;
+        font-style: italic
+      }
+      pre .keyword,
+      pre .css .rule .keyword,
+      pre .winutils,
+      pre .javascript .title,
+      pre .nginx .title,
+      pre .subst,
+      pre .request,
+      pre .status {
+        color: #333;
+        font-weight: bold
+      }
+      pre .number,
+      pre .hexcolor,
+      pre .ruby .constant {
+        color: #099;
+      }
+      pre .string,
+      pre .tag .value,
+      pre .phpdoc,
+      pre .tex .formula {
+        color: #d14
+      }
+      pre .title,
+      pre .id {
+        color: #900;
+        font-weight: bold
+      }
+      pre .javascript .title,
+      pre .lisp .title,
+      pre .clojure .title,
+      pre .subst {
+        font-weight: normal
+      }
+      pre .class .title,
+      pre .haskell .type,
+      pre .vhdl .literal,
+      pre .tex .command {
+        color: #458;
+        font-weight: bold
+      }
+      pre .tag,
+      pre .tag .title,
+      pre .rules .property,
+      pre .django .tag .keyword {
+        color: #000080;
+        font-weight: normal
+      }
+      pre .attribute,
+      pre .variable,
+      pre .lisp .body {
+        color: #008080
+      }
+      pre .regexp {
+        color: #009926
+      }
+      pre .class {
+        color: #458;
+        font-weight: bold
+      }
+      pre .symbol,
+      pre .ruby .symbol .string,
+      pre .lisp .keyword,
+      pre .tex .special,
+      pre .prompt {
+        color: #990073
+      }
+      pre .built_in,
+      pre .lisp .title,
+      pre .clojure .built_in {
+        color: #0086b3
+      }
+      pre .preprocessor,
+      pre .pi,
+      pre .doctype,
+      pre .shebang,
+      pre .cdata {
+        color: #999;
+        font-weight: bold
+      }
+      pre .deletion {
+        background: #fdd
+      }
+      pre .addition {
+        background: #dfd
+      }
+      pre .diff .change {
+        background: #0086b3
+      }
+      pre .chunk {
+        color: #aaa
+      }
+    </style>
+  </head>
+  <body>  
+    <h1 id="markdown-wysiwyg-1-blog-markdown-removed-by-copywriter-">Markdown <del>WYSIWYG</del> <a href="/#/blog/markdown" title="Removed By Copywriter">1</a></h1>
+<h2 id="remember-fckeditor-">Remember FCKeditor?</h2>
+<p>Ah yes the classic WYSIWIG FCKeditor. The good ol&#39; <del>pull my hair out</del> days. Manually fixing all the
+ghost HTML created by the tool that was suppose strip content &#39;paste(d) from word&#39; to allow Copywriters the ability to
+quickly change their own content without the need for Engineering efforts (breath, that was a mouthful).
+Thankfully Engineers fixed all that nonsense... right? Answer: Yes and No. Amazingly the more recent incarnation
+of FCKeditor, <a href="http://ckeditor.com/">CKeditor</a>, while better than it&#39;s predecessor, still suffers from the same
+fundamental flaws. The entropy (complexity / messiness) of the underlying source HTML still tends to increase as edits
+are made. Luckily a much better technology is available; Markdown.</p>
+<h2 id="markdown-in-a-nutshell">Markdown in a Nutshell</h2>
+<p>Its common place these days to see <a href="http://en.wikipedia.org/wiki/Markdown" title="Wikipedia">Markdown</a> (*.md files)
+in almost any <a href="http://git-scm.com/">git</a> repository. <a href="http://github.com">GitHub</a>, while not the first to use Markdown,
+certainly added to it&#39;s popularity by adopting a <a href="https://help.github.com/articles/github-flavored-markdown/">flavor</a>
+of Markdown with popular extensions such as <a href="https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks">Fensed Code Blocks</a>.
+But Markdown is more than a convenient documentation
+syntax. By design it&#39;s intended goal was to provide a writing syntax which was &quot;easy-to-read, easy-to-write&quot; and easily
+converted into HTML.</p>
+<h2 id="enter-our-copywriters">Enter Our Copywriters</h2>
+<p>Markdown is an ideal syntax for these types of tools. Most Copywriters I&#39;ve worked with are
+already familiar with Markdown. In any case it&#39;s easy to learn and Copywriters new to Markdown
+generally pick it up in a day. It&#39;s certainly easier to read and write and requires very little knowledge, if
+any, about html. What they still need however is a robust, real-time mechanism for updating
+Markdown based content.</p>
+<p>The first action a User takes when visiting a new site is almost certainly to read. Copywriters therefore are crucial contributors
+to the User&#39;s first Impression. Knowing that the first impression is the most crucial, therefore we should aim to empower
+our Copywriters with as much agility as possible. It is painful for even us Engineers to see a landing page typo, which must
+wait for the standard release processes, no matter how fast they are before it&#39;s fixed.  This type of static content should
+be owned by the Copywriters, decoupled from the application, and necessitate either a separate deployment path (my preference)
+and/or administrative power tools.</p>
+<p>These types of features have historically taken lower priority with many living out their existence in the back log.
+The classical perspective enforces a strict separation between Copywriters and the product, and enforces a restrictive dependency
+on release processes, which often include rebuilding the entire application, though only static content changes are logically necessary.</p>
+<p>We collectively become more efficient by placing power tools in the hands of Copywriters.
+Initially Copywriters will have more freedom and agility allowing them to experiment more often and remain on task
+instead of waiting for Engineering cycles to become available. Likewise Engineering cycles otherwise required to make changes
+to static content can instead be spent on higher value items.</p>
+<h2 id="general-thoughts">General Thoughts</h2>
+<p>In general I believe we Engineers should remind ourselves to keep in mind that the next feature may or may not be more valuable
+than empowering our coworkers with better tools and automation.</p>
+<h2 id="more">More</h2>
+<ol>
+<li><a href="https://stackedit.io/">stackedit.io</a> - Markdown based WYSIWYG</li>
+</ol>
+
+  </body>
+</html>
